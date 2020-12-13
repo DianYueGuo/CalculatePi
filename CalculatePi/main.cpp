@@ -9,7 +9,17 @@
 #include <iostream>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    //輸入
+    printf("求到小數點後第幾位π:");
+    int n; // 小數點後第幾位
+    scanf("%d", &n);
+    
+    
+    //計算出π值
+    
+    
+    //print出答案
+    
+    
     return 0;
 }
