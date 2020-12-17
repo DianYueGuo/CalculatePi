@@ -8,15 +8,15 @@
 
 #include "Digit.hpp"
 
-Digit::Digit(const Digit v){
+Digit::Digit(const Digit::digit v){
     Digit::value = v;
 }
 
-void Digit::set(const Digit v){
+void Digit::set(const Digit::digit v){
     Digit::value = v;
 }
 
-Digit::Digit Digit::get() const{
+Digit::digit Digit::get() const{
     return value;
 }
 
