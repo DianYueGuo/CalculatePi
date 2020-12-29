@@ -7,18 +7,33 @@
 //
 
 #include <iostream>
+#include "Digit.hpp"
+#include "Number.hpp"
+#include "Calculation.hpp"
 
-int main(int argc, const char * argv[]) {
-    //輸入
-    printf("求到小數點後第幾位π:");
-    int n; // 小數點後第幾位
-    scanf("%d", &n);
+//int main(int argc, const char * argv[]) {
+//    //輸入
+//    printf("求到小數點後第幾位π:");
+//    int n; // 小數點後第幾位
+//    scanf("%d", &n);
+//
+//
+//    //計算出π值
+//
+//
+//    //print出答案
+//
+//
+//    return 0;
+//}
+
+int main(){ // test class
+    Number number1("123.5678");
+    Number number2("1534578.766987");
     
+    Calculation::numberAddition(number1, number2, 0);
     
-    //計算出π值
-    
-    
-    //print出答案
+    std::cout << number1.getString() << std::endl;
     
     
     return 0;
