@@ -14,7 +14,8 @@
 
 class Digit{
     public:
-        enum digit{zero, one, two, three, four, five, six, seven, eight, nine};//定義基本數字
+        enum digit {zero, one, two, three, four, five, six, seven, eight, nine};//定義基本數字
+    
         Digit(const digit);//初始設定數字
         Digit(const char);
     

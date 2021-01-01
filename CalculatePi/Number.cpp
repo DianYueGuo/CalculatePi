@@ -11,11 +11,18 @@
 #include <string>
 
 Number::Number(){
+    Number::numberSign = Number::positive;
     Number::number.resize(1, Digit::zero);
     Number::digitIndex = 0;
 }
 
 Number::Number(const std::string n){
+    if(n.compare(0, 1, "-") == 0){
+        Number::numberSign = Number::negative;
+    }else{
+        Number::numberSign = Number::positive;
+    }
+    
     if(n.size() > 0){
         Number::digitIndex = -1;
         
@@ -61,6 +68,14 @@ Digit Number::get(const Number::Num n) const{
         return Number::number.at(index);
 }
 
+void Number::setSign(const Number::sign s){
+    Number::numberSign = s;
+}
+
+Number::sign Number::getSign() const{
+    return Number::numberSign;
+}
+
 Number::Num Number::findNextNumber(const Number::Num index) const{
     Number::Num i = index;
     if(i < 0) i = 0;
@@ -79,6 +94,10 @@ Number::Num Number::getDigitIndex() const{
 
 std::string Number::getString() const{
     std::string str;
+    
+    if(Number::numberSign == Number::negative){
+        str.append("-");
+    }
     
     for(Number::Num i = 0; i < Number::number.size(); i++){
         str.append(Number::number.at(i).getString());

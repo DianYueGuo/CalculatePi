@@ -17,6 +17,8 @@ class Calculation{
     public:
         static void numberAddition(Number&, const Digit, const Number::Num&);//個位數加法 將b加到a的第n位上
         static void numberAddition(Number&, const Number, const Number::Num&);//將b加到a的第n位上 ex: numberAddition(123, 25, 3)=123+25*10^3
+        static void numberSubtraction(Number&, const Digit, const Number::Num&);//個位數減法
+        static void numberMultiplication(Number&, const Number);//數字乘法
 };
 
 #endif /* Calculation_hpp */
