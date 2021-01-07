@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C023814259F85900028B55D /* Comparsion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C023812259F85900028B55D /* Comparsion.cpp */; };
 		7C9C2E6F25852885008BDA8D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C9C2E6E25852885008BDA8D /* main.cpp */; };
 		7C9C2E7725852B96008BDA8D /* Digit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C9C2E7525852B96008BDA8D /* Digit.cpp */; };
 		7C9C2E7A2585320D008BDA8D /* Number.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C9C2E782585320D008BDA8D /* Number.cpp */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7C023812259F85900028B55D /* Comparsion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Comparsion.cpp; sourceTree = "<group>"; };
+		7C023813259F85900028B55D /* Comparsion.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Comparsion.hpp; sourceTree = "<group>"; };
 		7C9C2E6B25852885008BDA8D /* CalculatePi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CalculatePi; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9C2E6E25852885008BDA8D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		7C9C2E7525852B96008BDA8D /* Digit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Digit.cpp; sourceTree = "<group>"; };
@@ -75,6 +78,8 @@
 				7C9C2E792585320D008BDA8D /* Number.hpp */,
 				7C9C2E7B25853F59008BDA8D /* Calculation.cpp */,
 				7C9C2E7C25853F59008BDA8D /* Calculation.hpp */,
+				7C023812259F85900028B55D /* Comparsion.cpp */,
+				7C023813259F85900028B55D /* Comparsion.hpp */,
 			);
 			path = CalculatePi;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C023814259F85900028B55D /* Comparsion.cpp in Sources */,
 				7C9C2E7A2585320D008BDA8D /* Number.cpp in Sources */,
 				7C9C2E6F25852885008BDA8D /* main.cpp in Sources */,
 				7C9C2E7725852B96008BDA8D /* Digit.cpp in Sources */,

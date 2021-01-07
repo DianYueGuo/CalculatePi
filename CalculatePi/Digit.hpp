@@ -9,7 +9,6 @@
 #ifndef Digit_hpp
 #define Digit_hpp
 
-#include <stdio.h>
 #include <string>
 
 class Digit{

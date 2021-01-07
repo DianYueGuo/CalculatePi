@@ -26,7 +26,7 @@ Number::Number(const std::string n){
     if(n.size() > 0){
         Number::digitIndex = -1;
         
-        Number::Num i = 0;
+        Number::num i = 0;
         for(; i < n.size() && n.compare(i, 1, ".") != 0; i++){
                 Number::number.push_back(Digit(n.at(i)));
                 Number::digitIndex++;
@@ -42,11 +42,11 @@ Number::Number(const std::string n){
 }
 
 
-void Number::set(const Number::Num n, const Digit::digit v){
-    Number::Num index = Number::digitIndex - n;
+void Number::set(const Number::num n, const Digit::digit v){
+    Number::num index = Number::digitIndex - n;
     const size_t size = Number::number.size();
     
-    if(index > Number::Num(size) - 1){//index超出vector的範圍
+    if(index > Number::num(size) - 1){//index超出vector的範圍
         Number::number.insert(Number::number.end(), index + 1 - size, Digit(Digit::zero));//重設vector大小 從後面增加
     }else if(index < 0){//index是負值
         Number::number.insert(Number::number.begin(), -index, Digit(Digit::zero));//重設vector大小 從前面增加
@@ -59,8 +59,8 @@ void Number::set(const Number::Num n, const Digit::digit v){
     Number::number.at(index) = Digit(v);
 }
 
-Digit Number::get(const Number::Num n) const{
-    Number::Num index = Number::digitIndex - n;
+Digit Number::get(const Number::num n) const{
+    Number::num index = Number::digitIndex - n;
     
     if(index > Number::number.size() - 1 || index < 0)
         return Digit::zero;//index超出vector的範圍
@@ -76,8 +76,8 @@ Number::sign Number::getSign() const{
     return Number::numberSign;
 }
 
-Number::Num Number::findNextNumber(const Number::Num index) const{
-    Number::Num i = index;
+Number::num Number::findNextNumber(const Number::num index) const{
+    Number::num i = index;
     if(i < 0) i = 0;
     
     for(;i < Number::number.size(); i++){
@@ -88,7 +88,7 @@ Number::Num Number::findNextNumber(const Number::Num index) const{
     return index;//找不到，回傳原位置
 }
 
-Number::Num Number::getDigitIndex() const{
+Number::num Number::getDigitIndex() const{
     return Number::digitIndex;
 }
 
@@ -99,7 +99,7 @@ std::string Number::getString() const{
         str.append("-");
     }
     
-    for(Number::Num i = 0; i < Number::number.size(); i++){
+    for(Number::num i = 0; i < Number::number.size(); i++){
         str.append(Number::number.at(i).getString());
         if(i == Number::digitIndex){
             str.append(".");

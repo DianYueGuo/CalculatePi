@@ -29,11 +29,11 @@
 
 int main(){ // test class
     Number number1("123.5678");
-    Number number2("0.00001");
+    Number number2("-00000.00001");
     
     Calculation::numberAddition(number1, number2, 0);
     
-    std::cout << number1.getString();
+    std::cout << number1.getString() << std::endl;
     
     
     return 0;

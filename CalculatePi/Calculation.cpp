@@ -10,7 +10,7 @@
 #include "Digit.hpp"
 #include "Number.hpp"
 
-void Calculation::numberAddition(Number& a, const Digit b, const Number::Num& n){
+void Calculation::numberAddition(Number& a, const Digit b, const Number::num& n){
     const Digit::digit B = b.get();
     
     switch (a.get(n).get()) {
@@ -370,18 +370,16 @@ void Calculation::numberAddition(Number& a, const Digit b, const Number::Num& n)
     }
 }
 
-void Calculation::numberSubtraction(Number& a, const Digit b, const Number::Num& n){
+void Calculation::numberSubtraction(Number& a, const Digit b, const Number::num& n){
     
 }
 
-void Calculation::numberAddition(Number& a, const Number b, const Number::Num& n){
-    if(b.getSign() == Number::positive){
-        Number::Num i = -1;//在b中的index
+void Calculation::numberAddition(Number& a, const Number b, const Number::num& n){
+    if(a.getSign() == Number::positive){
+        Number::num i = -1;//在b中的index
         while(b.findNextNumber(i) != i){//如果還有下一個
             i = b.findNextNumber(i);
             Calculation::numberAddition(a, b.get(b.getDigitIndex() - i), n + b.getDigitIndex() - i);//把數字加上去
         }
-    }else{
-        
     }
 }
